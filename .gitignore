@@ -1,2 +1,4 @@
 /node_modules
+/pass-it-around/node_modules
 .env
+/pass-it-around/.env
