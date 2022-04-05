@@ -25,6 +25,15 @@ app.get('/magic/:phrase', function (req,res) {
     let rand = Math.floor(Math.random()*20)
     res.send(`<h1>${req.params.phrase}</h1> </br> <h1>${ball[rand]}</h1>`);
 })
+app.get('/fibonacci/:num', (req,res) => {
+    let num = parseInt(re.params.num)
+    // A number is Fibonacci if and only if one or both of (5*n2 + 4) or (5*n2 – 4) is a perfect square
+    if(Number.isInteger(Math.sprt(5*(num**2) + 4)) || Number.isInteger(Math.sprt(5*(num**2) - 4))) {
+        res.send("This number is a Fibonacci Number")
+    } else {
+        res.send("This number is not a Fibonacci number")
+    }
+})
 ///////////////////////////
 // Server Listener
 ///////////////////////////
