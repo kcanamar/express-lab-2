@@ -29,9 +29,9 @@ app.get('/fibonacci/:num', (req,res) => {
     let num = parseInt(re.params.num)
     // A number is Fibonacci if and only if one or both of (5*n2 + 4) or (5*n2 – 4) is a perfect square
     if(Number.isInteger(Math.sprt(5*(num**2) + 4)) || Number.isInteger(Math.sprt(5*(num**2) - 4))) {
-        res.send("This number is a Fibonacci Number")
+        res.send("Very good. It is Fibonacci.")
     } else {
-        res.send("This number is not a Fibonacci number")
+        res.send("I can tell this is not a fibonacci number.")
     }
 })
 ///////////////////////////
