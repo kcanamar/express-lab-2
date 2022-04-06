@@ -39,13 +39,13 @@ app.get("/hive/:bugs", (req,res) => {
         res.send(`The Hive has been eradicated! </br>
         All thrall have been sqwashed! </br>
         <a href="http://localhost:3000/hive">Ready for the next wave?</a>`)
-    } else if (Math.random() < 0.3) {
+    } else if (Math.random() < 0.03) {
         const bugSpawn = parseInt(req.params.bugs) + (Math.floor(Math.random() * 30))
         res.send(`${bugSpawn} little thrall in the code </br>
         ${bugSpawn} little thrall </br>
         Take one on </br>
         Smash it and run </br>
-        <a href="http://localhost:3000/hive/${bugSpawn}">Oh no the thrall are multiplying! Quick clean them up faster!</a>`)
+        <a href="http://localhost:3000/hive/${bugSpawn - 1}">Oh no the thrall are multiplying! Quick clean them up faster!</a>`)
     } else {
         res.send(`${req.params.bugs} little thrall in the code. </br>
         ${req.params.bugs} little thrall </br>
