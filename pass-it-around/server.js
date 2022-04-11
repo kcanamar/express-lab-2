@@ -27,7 +27,7 @@ app.get('/:bottles', function (req,res) {
     if (req.params.bottles - 1 === 0) {
         res.send(`${req.params.bottles} bottle of beer on the wall
     </br>
-    <a href="http://localhost:3000/${req.params.bottles}">Start Over.</a>`);
+    <a href="http://localhost:3000/">Start Over.</a>`);
     } else {
         res.send(`${req.params.bottles} bottles of beer on the wall
     </br>
